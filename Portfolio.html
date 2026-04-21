@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavna Rawal — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+
+<!-- ========== HERO / CUTTING MAT CANVAS ========== -->
+<section class="hero" id="hero" data-screen-label="01 Hero">
+  <div class="mat-grid"></div>
+  <div class="mat-corner"></div>
+  <div class="mat-ruler top"><div class="ticks" id="rulerTop"></div></div>
+  <div class="mat-ruler left"><div class="ticks" id="rulerLeft"></div></div>
+
+  <div class="hero-meta">
+    <div><span class="dot"></span>AVAILABLE FOR NEW ROLES</div>
+    <span class="name">Bhavna Rawal</span>
+    <div style="margin-top:6px;">Product Designer · 3+ YRS</div>
+  </div>
+
+  <nav class="hero-nav">
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
+    <a href="https://drive.google.com/file/d/10t5lN-qBjCgSMsbBu-AbDkonT0hk-0xu/view?usp=sharing" target="_blank" rel="noopener" id="navCV">CV ↗</a>
+  </nav>
+
+  <div id="canvasItems"></div>
+
+  <div class="hero-hint">
+    <span class="key">DRAG</span> or <span class="key">CLICK</span> the objects
+  </div>
+
+  <div class="scroll-cue">SCROLL<span class="line"></span></div>
+</section>
+
+<!-- Global theme switcher (top-right, outside hero so it persists across scroll) -->
+<div class="theme-switch" id="themeSwitch" role="group" aria-label="Theme">
+  <button class="ts-btn active" data-theme="light" title="Light (cutting mat)" aria-label="Light">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.5 2.5l1 1M10.5 10.5l1 1M11.5 2.5l-1 1M3.5 10.5l-1 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+  </button>
+  <button class="ts-btn" data-theme="dark" title="Dark" aria-label="Dark">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11 8.5A4.5 4.5 0 0 1 5.5 3c0-.3 0-.6.1-.9A5 5 0 1 0 11.9 8.4c-.3 0-.6.1-.9.1Z" stroke="currentColor" stroke-width="1.3" fill="currentColor" fill-opacity="0.25" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="ts-btn" data-theme="torch" title="Torch (hover to reveal)" aria-label="Torch">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L7.5 4.5L11 5L7.5 5.5L7 9L6.5 5.5L3 5L6.5 4.5L7 1Z" fill="currentColor"/><circle cx="7" cy="11" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+  </button>
+</div>
+
+<!-- Torch overlay (only visible in torch mode) -->
+<div class="torch-overlay" id="torchOverlay"></div>
+
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about" data-screen-label="02 About">
+  <div class="about-inner">
+    <div class="section-label"><span class="num">02</span> / About · A slow reveal</div>
+
+    <p class="about-narrative" id="narrative">
+      I'm a product designer who turns <span class="highlight-word">complex systems into calm interfaces</span> — 3+ years across LMS, B2B SaaS, and D2C products including <em>AI-enabled experiences</em>. I care about the messy middle where <em>user needs</em> and <em>business outcomes</em> argue politely. Lately, I'm exploring <em>AI-assisted design</em>, gamified learning, and the strange new job of designing things that design themselves back.
+    </p>
+
+    <div class="about-facets">
+      <div class="facet">
+        <div class="ft"><span class="idx">01</span> Who</div>
+        <h3>A product designer who ships, iterates, and questions the brief.</h3>
+        <p>3+ years across LMS, B2B SaaS, and D2C consumer products — including AI-enabled experiences. Currently leading design for BetterPlace's Skilling platform, building end-to-end learning and assessment experiences for frontline workers across admin and learner ecosystems.</p>
+      </div>
+      <div class="facet">
+        <div class="ft"><span class="idx">02</span> What I care about</div>
+        <h3>Users first — but business math keeps the lights on.</h3>
+        <p>Good design balances user needs and business outcomes. I measure success in activation rates, completion rates, and drop-offs that never happened. At Jumbo Play I reduced churn by 47% and improved activation 25–30% — numbers that earned their keep.</p>
+      </div>
+      <div class="facet">
+        <div class="ft"><span class="idx">03</span> Now exploring</div>
+        <h3>How do you design when the product designs itself?</h3>
+        <p>Contributing to a new AI-assisted design system using Claude, Cursor, and Vercel. Thinking deeply about AI interfaces — agents, co-pilots, UX writing for AI and system states — and the design systems that hold it all together as things get weirder.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROJECTS ========== -->
+<section class="projects" id="projects" data-screen-label="03 Projects">
+  <div class="projects-inner">
+    <div class="section-label"><span class="num">03</span> / Selected work · Hover to peek</div>
+    <h2>Four case studies, still <em>drying</em>.</h2>
+    <div class="sub">Deep-dives in progress — hover for the gist, full stories dropping soon.</div>
+
+    <div class="project-grid">
+      <article class="project-card" data-variant="glitch" data-title="Skilling LMS — assessments, simplified" data-impact="−45% creation time · +22% completion" data-tags="B2B SaaS · LMS · 2025">
+        <div class="wip"><span class="dot"></span>WIP · 01</div>
+        <div class="idx">01 / 04</div>
+        <div class="preview-layer"></div>
+        <div class="meta">
+          Skilling LMS — assessments, simplified
+          <span class="impact">−45% creation time · +22% completion</span>
+        </div>
+        <div class="tags">BetterPlace · '25</div>
+      </article>
+
+      <article class="project-card" data-variant="hatch" data-title="Jumbo Play — 0 → 1, 1K to 500K+ users" data-impact="−47% churn · +25–30% activation" data-tags="D2C · Gamification · 2024">
+        <div class="wip"><span class="dot"></span>WIP · 02</div>
+        <div class="idx">02 / 04</div>
+        <div class="preview-layer"></div>
+        <div class="meta">
+          Jumbo Play — 0 → 1, 1K to 500K+ users
+          <span class="impact">−47% churn · +25–30% activation</span>
+        </div>
+        <div class="tags">Founding Designer · '24</div>
+      </article>
+
+      <article class="project-card" data-variant="magnet" data-title="AI Design System — built with agents" data-impact="Claude + Cursor + Vercel pipeline" data-tags="AI · Systems · 2025">
+        <div class="wip"><span class="dot"></span>WIP · 03</div>
+        <div class="idx">03 / 04</div>
+        <div class="preview-layer"></div>
+        <div class="meta">
+          AI Design System — built with agents
+          <span class="impact">Claude · Cursor · Vercel pipeline</span>
+        </div>
+        <div class="tags">BetterPlace · '25</div>
+      </article>
+
+      <article class="project-card" data-variant="blueprint" data-title="Voizo.ai — hiring, but seamless" data-impact="Employer + candidate dashboards · pre-seed" data-tags="AI · SaaS · 2023">
+        <div class="wip"><span class="dot"></span>WIP · 04</div>
+        <div class="idx">04 / 04</div>
+        <div class="preview-layer"></div>
+        <div class="meta">
+          Voizo.ai — hiring, but seamless
+          <span class="impact">Dual dashboards · pre-seed AI</span>
+        </div>
+        <div class="tags">AI · SaaS · '23</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<section class="footer" id="contact" data-screen-label="04 Contact">
+  <div class="footer-inner">
+    <h2>Let's make something <em>weirdly good</em>.</h2>
+    <p style="font-family: var(--serif); font-size: 24px; font-style: italic; color: var(--ink-mute); max-width: 620px; line-height: 1.4;">
+      Currently at BetterPlace, always curious about a good problem. Open to chats about AI design, LMS systems, or 0→1 product work — start with an email, or find me wandering in the usual places.
+    </p>
+    <div class="footer-row">
+      <div class="left">
+        <a href="mailto:bhavnarawal.ux@gmail.com">bhavnarawal.ux@gmail.com</a>
+        <a href="https://drive.google.com/file/d/10t5lN-qBjCgSMsbBu-AbDkonT0hk-0xu/view?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
+        <a href="https://www.bhavnarawalux.super.site" target="_blank" rel="noopener">Portfolio ↗</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="#" target="_blank" rel="noopener">Medium ↗</a>
+      </div>
+      <div style="color: var(--ink-mute);">
+        © 2026 · Designed with care · Bhavna Rawal
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Easter egg toast -->
+<div class="toast" id="toast">
+  <span id="toastMsg">You found a secret.</span>
+  <span class="count" id="toastCount">1</span>
+</div>
+
+<!-- cursor dot trail -->
+<div class="cursor-dot" id="cursorDot"></div>
+
+<script>
+/* =========================================================
+   HERO CANVAS — draggable cutting-mat items
+   ========================================================= */
+(function(){
+  const root = document.getElementById('canvasItems');
+  if (!root) return;
+
+  // --- rulers ---
+  const rulerTop = document.getElementById('rulerTop');
+  const rulerLeft = document.getElementById('rulerLeft');
+  const W = window.innerWidth, H = window.innerHeight;
+  const ticksX = Math.ceil(W / 32);
+  const ticksY = Math.ceil(H / 32);
+  for (let i = 0; i < ticksX; i++) {
+    const t = document.createElement('div');
+    t.className = 'tick' + (i % 5 === 0 ? ' major' : '');
+    if (i % 5 === 0 && i > 0) {
+      const l = document.createElement('span');
+      l.className = 'label';
+      l.textContent = i * 32 + 'px';
+      t.appendChild(l);
+    }
+    rulerTop.appendChild(t);
+  }
+  for (let i = 0; i < ticksY; i++) {
+    const t = document.createElement('div');
+    t.className = 'tick' + (i % 5 === 0 ? ' major' : '');
+    rulerLeft.appendChild(t);
+  }
+
+  // --- item definitions ---
+  // positions are in vw/vh-ish percentages so it scales; each has a `reveal` string
+  const items = [
+    // 4 sticky notes — the core
+    {
+      type: 'sticky', variant: 'yellow',
+      x: 10, y: 22, rot: -5,
+      tag: 'PRINCIPLE 01',
+      body: '"Good design survives being explained to a skeptical PM."',
+      reveal: { title: 'A Bhavna-ism', body: 'I keep a running doc of design principles that earned their keep. This is №1.' }
+    },
+    {
+      type: 'sticky', variant: 'mint',
+      x: 68, y: 18, rot: 4,
+      tag: 'NOW',
+      body: 'designing the LMS that 500K+ frontline workers use.',
+      reveal: { title: 'At BetterPlace', body: 'Cut assessment creation time by 45%. Learner completion up 22%. Still iterating.' }
+    },
+    {
+      type: 'sticky', variant: 'pink',
+      x: 72, y: 62, rot: -3,
+      tag: 'OBSESSION',
+      body: 'Empty states deserve better. Fight me.',
+      reveal: { title: 'Hot take', body: 'Every empty state is a missed chance to teach, delight, or nudge. I\'ve got opinions.' }
+    },
+
+    // Torn paper quote — centerpiece
+    {
+      type: 'torn', x: 40, y: 48, rot: -2,
+      body: '"Design is just caring out loud."',
+      attr: '— from a notebook, page 14',
+      reveal: { title: 'Origin unknown', body: 'Quoting this for years. Possibly stole it from my own head, at 2am.' }
+    },
+
+    // Polaroid
+    {
+      type: 'polaroid', x: 14, y: 60, rot: -6,
+      caption: 'pencil test №8',
+      imgBg: '#1a1d1a',
+      imgContent: 'svg-sketch',
+      reveal: { title: 'Monday warmups', body: '20 minutes, pen and paper, no screens. Still the best way to think.' }
+    },
+
+    // Tool chips — grouped, just 2
+    { type: 'chip', x: 46, y: 82, label: 'Figma', color: '#a259ff', reveal: { title: 'Home base', body: 'Variables + auto-layout + modes. ~5 hrs/day here.' } },
+    { type: 'chip', x: 58, y: 84, label: 'Cursor', color: '#000', reveal: { title: 'AI pair-programmer', body: 'Design isn\'t just pixels anymore. Velocity went 4x.' } },
+
+    // One doodle
+    { type: 'doodle', x: 84, y: 40, rot: 0, svg: 'arrow', reveal: { title: 'Forward', body: 'The simplest doodle. Drawn on every napkin I\'ve ever touched.' } },
+  ];
+
+  // --- item builders ---
+  function el(tag, cls, html) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+
+  const svgs = {
+    spiral: `<svg class="doodle" width="90" height="90" viewBox="0 0 90 90"><path d="M45 45 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0 a16 16 0 1 1 -32 0 a20 20 0 1 1 40 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/></svg>`,
+    arrow: `<svg class="doodle" width="120" height="60" viewBox="0 0 120 60"><path d="M8 40 Q 35 8, 70 32 T 108 28 M 100 18 L 108 28 L 98 34" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>`,
+    face: `<svg class="doodle" width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="28" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="32" cy="36" r="1.6" fill="#fff"/><circle cx="48" cy="36" r="1.6" fill="#fff"/><path d="M30 48 Q 40 56, 50 48" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>`,
+    desk: `<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"><rect width="100" height="100" fill="#d97437"/><rect x="10" y="50" width="80" height="6" fill="#8b4513"/><rect x="14" y="56" width="22" height="30" fill="#fff" opacity="0.15"/><rect x="64" y="56" width="22" height="30" fill="#fff" opacity="0.15"/><rect x="28" y="30" width="44" height="20" fill="#1a1d1a" opacity="0.6"/><circle cx="50" cy="40" r="3" fill="#7dd87d"/></svg>`,
+    sketch: `<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"><rect width="100" height="100" fill="#1a1d1a"/><path d="M20 70 Q 30 30, 50 40 T 80 30" fill="none" stroke="#f4efe4" stroke-width="1.2"/><path d="M22 78 Q 40 50, 60 55 T 82 48" fill="none" stroke="#f4efe4" stroke-width="1" opacity="0.6"/><circle cx="30" cy="28" r="8" fill="none" stroke="#f4efe4" stroke-width="1"/></svg>`,
+  };
+
+  function build(item, idx) {
+    let node;
+    if (item.type === 'sticky') {
+      node = el('div', `canvas-item sticky ${item.variant}`,
+        `<span class="tag">${item.tag}</span>${item.body.replace(/\n/g,'<br>')}`);
+    } else if (item.type === 'index') {
+      node = el('div', 'canvas-item index-card',
+        `<span class="label">${item.label}</span><div class="body">${item.body}</div>`);
+    } else if (item.type === 'torn') {
+      node = el('div', 'canvas-item torn-paper',
+        `${item.body}<span class="attr">${item.attr}</span>`);
+    } else if (item.type === 'polaroid') {
+      const imgSvg = item.imgContent === 'svg-desk' ? svgs.desk :
+                     item.imgContent === 'svg-sketch' ? svgs.sketch : '';
+      node = el('div', 'canvas-item polaroid',
+        `<div class="photo" style="background:${item.imgBg};">${imgSvg}</div>
+         <div class="caption">${item.caption}</div>`);
+    } else if (item.type === 'chip') {
+      node = el('div', 'canvas-item tool-chip',
+        `<span class="swatch" style="background:${item.color};"></span>${item.label}`);
+    } else if (item.type === 'doodle') {
+      node = el('div', 'canvas-item', svgs[item.svg]);
+    } else if (item.type === 'tape') {
+      node = el('div', 'canvas-item tape');
+    } else {
+      return;
+    }
+
+    // position
+    node.style.left = item.x + '%';
+    node.style.top = item.y + '%';
+    node.style.transform = `rotate(${item.rot || 0}deg)`;
+    node.style.zIndex = 10 + idx;
+    node.dataset.baseRot = item.rot || 0;
+    node.dataset.idx = idx;
+    if (item.reveal) {
+      node.dataset.reveal = JSON.stringify(item.reveal);
+    }
+
+    // entrance stagger
+    node.style.opacity = '0';
+    node.style.transition = `opacity .6s ${0.05 * idx + 0.3}s, transform .7s ${0.05 * idx + 0.3}s cubic-bezier(.2,.9,.3,1.2)`;
+    const finalTransform = node.style.transform;
+    node.style.transform = `rotate(${(item.rot||0) - 10}deg) translateY(-20px) scale(0.85)`;
+
+    root.appendChild(node);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        node.style.opacity = '1';
+        node.style.transform = finalTransform;
+      });
+    });
+  }
+
+  items.forEach(build);
+
+  // --- drag logic ---
+  let activeBubble = null;
+  function closeBubble() {
+    if (activeBubble) {
+      activeBubble.classList.remove('show');
+      const b = activeBubble;
+      activeBubble = null;
+      setTimeout(() => b.remove(), 250);
+    }
+  }
+
+  let zCounter = 200;
+  let dragState = null;
+  let clickCandidate = null;
+
+  document.addEventListener('pointerdown', (e) => {
+    const node = e.target.closest('.canvas-item');
+    if (!node || !node.closest('.hero')) return;
+
+    // Bring to front
+    zCounter++;
+    node.style.zIndex = zCounter;
+
+    const rect = node.getBoundingClientRect();
+    const heroRect = document.querySelector('.hero').getBoundingClientRect();
+
+    dragState = {
+      node,
+      startX: e.clientX,
+      startY: e.clientY,
+      offsetX: e.clientX - rect.left,
+      offsetY: e.clientY - rect.top,
+      heroRect,
+      moved: false,
+      baseRot: parseFloat(node.dataset.baseRot) || 0,
+    };
+    clickCandidate = node;
+    node.classList.add('dragging');
+    // keep current rotation during drag until real movement
+    node.style.transition = 'none';
+    e.preventDefault();
+  });
+
+  document.addEventListener('pointermove', (e) => {
+    if (!dragState) return;
+    const dx = e.clientX - dragState.startX;
+    const dy = e.clientY - dragState.startY;
+    if (Math.abs(dx) + Math.abs(dy) > 3) dragState.moved = true;
+
+    const { node, offsetX, offsetY, heroRect, baseRot } = dragState;
+    const x = e.clientX - heroRect.left - offsetX;
+    const y = e.clientY - heroRect.top - offsetY;
+
+    // convert to % for responsiveness preservation (but store as px via left/top)
+    node.style.left = x + 'px';
+    node.style.top = y + 'px';
+    // add a subtle tilt based on velocity
+    const tilt = Math.max(-8, Math.min(8, dx * 0.04));
+    node.style.transform = `rotate(${baseRot + tilt}deg)`;
+  });
+
+  document.addEventListener('pointerup', (e) => {
+    if (!dragState) return;
+    const { node, moved, baseRot } = dragState;
+    node.classList.remove('dragging');
+    node.style.transition = '';
+    node.style.transform = `rotate(${baseRot}deg)`;
+
+    // if no drag movement → treat as click (reveal)
+    if (!moved && clickCandidate === node) {
+      const revealJson = node.dataset.reveal;
+      if (revealJson) {
+        closeBubble();
+        const rev = JSON.parse(revealJson);
+        const bubble = document.createElement('div');
+        bubble.className = 'reveal-bubble';
+        bubble.innerHTML = `<div class="badge">${rev.title.toUpperCase()}</div>${rev.body}`;
+        const rect = node.getBoundingClientRect();
+        const heroRect = document.querySelector('.hero').getBoundingClientRect();
+        bubble.style.left = (rect.left - heroRect.left + rect.width/2 - 30) + 'px';
+        bubble.style.top = (rect.top - heroRect.top + rect.height + 14) + 'px';
+        document.querySelector('.hero').appendChild(bubble);
+        activeBubble = bubble;
+        requestAnimationFrame(() => bubble.classList.add('show'));
+        // auto close
+        setTimeout(() => { if (activeBubble === bubble) closeBubble(); }, 4200);
+
+        // tally easter eggs
+        window.__trackSecret && window.__trackSecret('reveal');
+      } else {
+        // tape clicked — little wiggle
+        node.animate([
+          { transform: `rotate(${baseRot}deg)` },
+          { transform: `rotate(${baseRot + 8}deg)` },
+          { transform: `rotate(${baseRot - 6}deg)` },
+          { transform: `rotate(${baseRot}deg)` },
+        ], { duration: 400, easing: 'ease-out' });
+      }
+    } else {
+      closeBubble();
+    }
+
+    dragState = null;
+    clickCandidate = null;
+  });
+
+  // close bubble on click outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.canvas-item')) closeBubble();
+  });
+
+  // close on scroll
+  window.addEventListener('scroll', closeBubble, { passive: true });
+
+})();
+
+</script>
+<script>
+/* =========================================================
+   ABOUT SECTION — progressive word reveal on scroll
+   ========================================================= */
+(function(){
+  const narrative = document.getElementById('narrative');
+  if (!narrative) return;
+
+  // Wrap each word in a span (preserving <em> and .highlight-word)
+  function wrapWords(node) {
+    const frag = document.createDocumentFragment();
+    node.childNodes.forEach(child => {
+      if (child.nodeType === 3) { // text
+        const words = child.textContent.split(/(\s+)/);
+        words.forEach(w => {
+          if (w.match(/^\s+$/)) {
+            frag.appendChild(document.createTextNode(w));
+          } else if (w.length) {
+            const span = document.createElement('span');
+            span.className = 'word';
+            span.textContent = w;
+            frag.appendChild(span);
+          }
+        });
+      } else if (child.nodeType === 1) {
+        // element (em / highlight-word). Wrap the whole thing as a .word so it reveals as a unit.
+        const wrap = document.createElement('span');
+        wrap.className = 'word';
+        if (child.classList && child.classList.contains('highlight-word')) {
+          wrap.classList.add('highlight-word');
+          wrap.innerHTML = child.innerHTML;
+        } else {
+          wrap.appendChild(child.cloneNode(true));
+        }
+        frag.appendChild(wrap);
+      }
+    });
+    node.innerHTML = '';
+    node.appendChild(frag);
+  }
+  wrapWords(narrative);
+
+  const words = [...narrative.querySelectorAll('.word')];
+
+  // Scroll-driven reveal using getBoundingClientRect math
+  function tick() {
+    const rect = narrative.getBoundingClientRect();
+    const winH = window.innerHeight;
+    // start revealing when top of element is 80% down the viewport; finish when bottom reaches 30% of viewport
+    const start = winH * 0.85;
+    const end = winH * 0.2;
+    const progress = (start - rect.top) / (start - (end - rect.height));
+    const p = Math.max(0, Math.min(1, progress));
+    const count = Math.round(p * words.length);
+    words.forEach((w, i) => {
+      w.classList.toggle('revealed', i < count);
+    });
+  }
+
+  window.addEventListener('scroll', tick, { passive: true });
+  window.addEventListener('resize', tick);
+  tick();
+
+  // Facets fade up
+  const facets = document.querySelectorAll('.facet');
+  facets.forEach((f, i) => {
+    f.style.opacity = '0';
+    f.style.transform = 'translateY(24px)';
+    f.style.transition = `opacity .7s ${i * 0.12}s, transform .7s ${i * 0.12}s cubic-bezier(.2,.8,.3,1)`;
+  });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+  facets.forEach(f => io.observe(f));
+
+})();
+
+</script>
+<script>
+/* =========================================================
+   INTERACTIONS — project magnetic cursor, easter eggs, toast
+   ========================================================= */
+(function(){
+  // --- magnetic hover for .project-card[data-variant="magnet"] ---
+  document.querySelectorAll('.project-card[data-variant="magnet"]').forEach(card => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      const mx = ((e.clientX - r.left) / r.width) * 100;
+      const my = ((e.clientY - r.top) / r.height) * 100;
+      card.style.setProperty('--mx', mx + '%');
+      card.style.setProperty('--my', my + '%');
+      const tx = (e.clientX - r.left - r.width/2) * 0.04;
+      const ty = (e.clientY - r.top - r.height/2) * 0.04;
+      card.style.transform = `translate(${tx}px, ${ty}px)`;
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.transform = '';
+    });
+  });
+
+  // --- click feedback on all project cards (placeholder intention) ---
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // ripple
+      const ripple = document.createElement('div');
+      const rect = card.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.cssText = `
+        position:absolute; left:${e.clientX - rect.left - size/2}px;
+        top:${e.clientY - rect.top - size/2}px;
+        width:${size}px; height:${size}px; border-radius:50%;
+        background: radial-gradient(circle, rgba(245,215,110,0.3), transparent 60%);
+        transform: scale(0); opacity: 1;
+        pointer-events: none; z-index: 10;
+        transition: transform .8s cubic-bezier(.2,.8,.3,1), opacity .8s;
+      `;
+      card.appendChild(ripple);
+      requestAnimationFrame(() => {
+        ripple.style.transform = 'scale(1)';
+        ripple.style.opacity = '0';
+      });
+      setTimeout(() => ripple.remove(), 800);
+
+      // toast
+      showToast('This one\'s still in the oven 🍞', 'WIP');
+    });
+  });
+
+  // --- easter eggs ---
+  const secrets = {
+    found: new Set(JSON.parse(localStorage.getItem('portfolioSecrets') || '[]')),
+    total: 5,
+  };
+
+  function markFound(key, label) {
+    if (secrets.found.has(key)) return;
+    secrets.found.add(key);
+    localStorage.setItem('portfolioSecrets', JSON.stringify([...secrets.found]));
+    showToast(label, `${secrets.found.size}/${secrets.total}`);
+  }
+
+  // konami-ish: type "hi"
+  let typed = '';
+  document.addEventListener('keydown', (e) => {
+    typed = (typed + e.key).toLowerCase().slice(-6);
+    if (e.key === '?' || typed.endsWith('?')) {
+      markFound('qmark', 'Easter egg: the "?" shortcut');
+      // briefly highlight all clickable hero items
+      document.querySelectorAll('.canvas-item[data-reveal]').forEach((n, i) => {
+        n.animate([
+          { filter: 'brightness(1)' },
+          { filter: 'brightness(1.3) drop-shadow(0 0 12px #f5d76e)' },
+          { filter: 'brightness(1)' },
+        ], { duration: 900, delay: i * 40, easing: 'ease-out' });
+      });
+    }
+    if (typed.endsWith('bhavna')) {
+      markFound('bhavna', 'You typed my name. Hi 👋');
+    }
+    if (typed.endsWith('design')) {
+      markFound('design', '"Design is just caring out loud."');
+    }
+  });
+
+  // triple-click on scroll cue
+  let clickCount = 0, clickTimer = null;
+  document.querySelector('.scroll-cue')?.addEventListener('click', () => {
+    clickCount++;
+    clearTimeout(clickTimer);
+    clickTimer = setTimeout(() => clickCount = 0, 600);
+    if (clickCount >= 3) {
+      markFound('tripleScroll', 'Secret: you triple-clicked the scroll cue');
+      document.body.animate([
+        { filter: 'hue-rotate(0deg)' },
+        { filter: 'hue-rotate(25deg)' },
+        { filter: 'hue-rotate(0deg)' },
+      ], { duration: 800 });
+    }
+  });
+
+  // discover reveals (counted separately)
+  let revealsSeen = 0;
+  window.__trackSecret = (type) => {
+    if (type === 'reveal') {
+      revealsSeen++;
+      if (revealsSeen === 3) markFound('threeReveals', 'Three secrets peeked. Curious one.');
+      if (revealsSeen >= 8) markFound('eightReveals', 'You\'ve read everything. Bless.');
+    }
+  };
+
+  // --- toast ---
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toastMsg');
+  const toastCount = document.getElementById('toastCount');
+  let toastTimer = null;
+  function showToast(msg, count) {
+    if (!toast) return;
+    toastMsg.textContent = msg;
+    toastCount.textContent = count || '';
+    toastCount.style.display = count ? 'inline-block' : 'none';
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+  }
+
+  // --- cursor dot (shows briefly on rapid movement) ---
+  const dot = document.getElementById('cursorDot');
+  let lastX = 0, lastY = 0, lastT = 0;
+  document.addEventListener('pointermove', (e) => {
+    const now = performance.now();
+    const dt = now - lastT;
+    const dist = Math.hypot(e.clientX - lastX, e.clientY - lastY);
+    const v = dist / Math.max(1, dt);
+    if (!dot) return;
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    if (v > 0.8) {
+      dot.style.opacity = '0.8';
+    } else {
+      dot.style.opacity = '0';
+    }
+    lastX = e.clientX; lastY = e.clientY; lastT = now;
+  });
+
+  // --- THEME SWITCHER (light / dark / torch) ---
+  const themeSwitch = document.getElementById('themeSwitch');
+  const torchOverlay = document.getElementById('torchOverlay');
+  const savedTheme = localStorage.getItem('portfolioTheme') || 'light';
+  function applyTheme(t) {
+    document.body.classList.remove('theme-light','theme-dark','theme-torch');
+    document.body.classList.add('theme-' + t);
+    themeSwitch?.querySelectorAll('.ts-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.theme === t);
+    });
+    localStorage.setItem('portfolioTheme', t);
+    if (t === 'torch') {
+      markFound('torchMode', 'Torch on. Move your cursor to see.');
+    }
+  }
+  applyTheme(savedTheme);
+  themeSwitch?.addEventListener('click', (e) => {
+    const btn = e.target.closest('.ts-btn');
+    if (btn) applyTheme(btn.dataset.theme);
+  });
+
+  // torch tracking
+  document.addEventListener('pointermove', (e) => {
+    if (document.body.classList.contains('theme-torch') && torchOverlay) {
+      torchOverlay.style.setProperty('--tx', e.clientX + 'px');
+      torchOverlay.style.setProperty('--ty', e.clientY + 'px');
+    }
+  });
+  document.addEventListener('touchmove', (e) => {
+    if (document.body.classList.contains('theme-torch') && torchOverlay && e.touches[0]) {
+      torchOverlay.style.setProperty('--tx', e.touches[0].clientX + 'px');
+      torchOverlay.style.setProperty('--ty', e.touches[0].clientY + 'px');
+    }
+  });
+
+  // --- welcome easter egg: show hint on first visit ---
+  if (!localStorage.getItem('portfolioVisited')) {
+    setTimeout(() => {
+      showToast('Tip: try dragging the sticky notes', 'hi');
+      localStorage.setItem('portfolioVisited', '1');
+    }, 2400);
+  }
+
+  // --- nav smooth scroll ---
+  document.querySelectorAll('.hero-nav a, .footer a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#') && href.length > 1) {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    }
+  });
+
+})();
+
+</script>
+
+
+</body>
+</html>
